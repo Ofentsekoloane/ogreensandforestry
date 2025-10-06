@@ -60,8 +60,8 @@ ul, ol {
 }
 ul, ol {
 	padding: 0;
-	webkit-padding: 0;
-	moz-padding: 0;
+	-webkit-padding-start: 0;
+	-moz-padding: 0s;
 }
 hr {
 	height: 3px;
@@ -202,15 +202,36 @@ header .intro-text {
 	padding-bottom: 200px;
 	text-align: center;
 }
+
+
 /* About Section */
 #about {
-	padding: 120px 0 80px 0;
-	background: #f6f6f6;
+	
+	background: url(../img/portfolio/07-small.jpg) top center no-repeat fixed;
+	background-size: cover;
 }
+#about .overlay{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,70ad47+100&0.6+0,0.4+100 */
+	padding: 30px;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(112,173,71,0.4) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(112,173,71,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(112,173,71,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', endColorstr='#6670ad47', GradientType=0 ); /* IE6-9 */
+	
+
+}
+#about h2{
+	color: #e4f1da;
+    text-align: center;
+
+}
+
 #about h3 {
+	color: #59cf61;
 	font-size: 22px;
 	font-weight: 600;
 	margin: 20px 0 0 0;
+	text-align: center;
 }
 #about .about-text span {
 	color: #70ad47;
@@ -234,9 +255,17 @@ header .intro-text {
 	margin-bottom: 40px;
 }
 #about p {
+	color: rgb(247, 247, 247) ;
 	line-height: 24px;
 	margin-top: 20px;
+    font-style: italic ;
+	font-size: medium;
+	text-align: center;
+
 }
+
+
+
 /* Services Section */
 #services {
 	padding: 120px 0;
@@ -272,9 +301,13 @@ header .intro-text {
 	background: rgba(255,255,255,0.6);
 }
 /* Portfolio Section */
+
 #portfolio {
-	padding: 100px 0;
-	background: #d9e4d8;
+	background: url(../img/portfolio/08-large.jpg) top center no-repeat fixed;
+	background-size: cover;
+}
+#portfolio .section-title p{
+	color:rgb(214, 248, 227);
 }
 .categories {
 	text-align: center;
@@ -379,24 +412,36 @@ ol.type li a:hover {
 }
 /* Testimonials Section */
 #testimonials {
-	background: #444 url(../img/testimonials-bg.jpg) center center no-repeat fixed;
+	background: #444 url(../img/portfolio/01-large.jpg) center center no-repeat fixed;
+	
 	background-size: cover;
 }
 #testimonials .overlay {
 	padding: 120px 0;
-	background: rgba(106, 175, 8, 0.85);
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(112,173,71,0.4) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(112,173,71,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(112,173,71,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', endColorstr='#6670ad47', GradientType=0 ); /* IE6-9 */
 }
 #testimonials h2 {
 	color: #fff;
 }
+
+#testimonials h3  {
+     color: #b7f3d0;
+	 font-size: 20px;
+	 
+
+}
 #testimonials hr {
-	background: rgba(255,255,255,0.6);
+	background-color: #666;
 }
 #testimonial p {
 	color: #fff;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 32px;
+	font-style:italic ;
 }
 .owl-theme .owl-controls .owl-page span {
 	display: block;
@@ -407,27 +452,22 @@ ol.type li a:hover {
 	opacity: 1;
 	border-radius: 50%;
 	background: rgba(255,255,255,0.4);
+	background: rgba(255,255,255,0.4);
 	transition: all 0.5s;
-	border: 1px solid rgba(255,255,255,0.3);
-}
-.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {
-	filter: Alpha(Opacity=100);
-	opacity: 1;
-	background: #fff;
-	border: 1px solid #fff;
-}
-.owl-theme .owl-controls .owl-page.active span {
-	background: #fff;
-	border: 1px solid #fff;
+	border: 1px solid #ffffff4d;
 }
 /* Contact Section */
 #contact {
 	padding: 100px 0;
-	background: #d7e4da;
+	background: #F6F6F6;
 }
 #contact .section-title p {
 	color: #777;
 }
+#contact .section-title h2 {
+	color: #bbb6b6;
+}
+
 #contact form {
 	padding: 0;
 	margin-top: 40px;
@@ -438,7 +478,7 @@ ol.type li a:hover {
 	font-weight: 600;
 }
 #contact .text-danger {
-	color: #cc1717;
+	color: #cc0033;
 	text-align: left;
 }
 label {
@@ -454,7 +494,7 @@ label {
 	font-size: 16px;
 	line-height: 1.42857143;
 	color: #444;
-	background-color: #ffffff;
+	background-color: #fff;
 	background-image: none;
 	border: 1px solid #ddd;
 	border-radius: 0;
@@ -508,24 +548,56 @@ color: #777;
 #footer .social ul li {
 	display: inline-block;
 	margin: 0 20px;
+
+	/*icon castumes*/
 }
-#footer .social i.fa {
+#footer .social i.fa-facebook {
 	font-size: 22px;
 	width: 40px;
 	height: 40px;
 	padding: 10px;
 	background: #444;
-	color: #6aaf08;
+	color: #0872af;
 	border-radius: 50%;
 	transition: all 0.3s;
 }
-#footer .social i.fa:hover {
-	background: #6aaf08;
-	color: #fff;
+#footer .social i.fa-facebook:hover {
+	background: #fff;
+	color: rgb(60, 136, 235);
 }
+#footer .social i.fa-map-marker {
+	font-size: 22px;
+	width: 40px;
+	height: 40px;
+	padding: 10px;
+	background: #444;
+	color: #50d62f;
+	border-radius: 50%;
+	transition: all 0.3s;
+}
+#footer .social i.fa-map-marker:hover {
+	background: #ffffff;
+	color:#d62f2f;
+}
+#footer .social i.fa-whatsapp {
+	font-size: 22px;
+	width: 40px;
+	height: 40px;
+	padding: 10px;
+	background: #444;
+	color: #2fd645;
+	border-radius: 50%;
+	transition: all 0.3s;
+}
+#footer .social i.fa-whatsapp:hover {
+	background: #ffffff;
+	color:#2fd645;
+}
+
+
 #footer p {
 	color: #666;
-	font-size: 15px;
+	font-size: 17px;
 }
 #footer a {
 	color: #888;
