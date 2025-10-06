@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>O-GREENS and FORESTRY</title>
+<title>O GREENS and FORESTRY</title>
 <meta name="description" content="">
 <meta name="author" content="">
 
@@ -30,6 +30,116 @@
 <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
+<!-- Animate.css for fun features! -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+  /* Existing styles... (unchanged) */
+  /* Existing styles... (unchanged) */
+  body, header, section, footer, input, textarea {
+    background: initial !important;
+    color: initial !important;
+    border-color: initial !important;
+  }
+  .btn {
+    background: initial !important;
+    color: initial !important;
+  }
+
+  body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background: #fdf0f0;
+    color: #222;
+    transition: background 0.3s, color 0.3s;
+  }
+  header, section, footer {
+    background: #6d0ddb;
+    color: #222;
+    border-radius: 12px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 12px rgba(34,139,34,0.07);
+    padding: 32px 0;
+  }
+  .section-title h2 {
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+  }
+  hr {
+    border-top: 2px solid #228B22;
+    width: 60px;
+    margin: 16px auto;
+  }
+  .btn, .btn-custom, .btn-success {
+    background: linear-gradient(90deg,#25c588 60%,#bd9186 100%);
+    color: #5ed67c !important;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 28px;
+    font-size: 18px;
+    box-shadow: 0 2px 8px rgba(153, 216, 37, 5);
+    transition: background 0.3s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn:hover, .btn-custom:hover, .btn-success:hover {
+    background: #228B22;
+    color: #ffffff;
+    transform: scale(1.07) rotate(-2deg);
+    box-shadow: 0 4px 16px 0 rgba(50,205,50,0.2), 0 0 0 4px #7fffde33;
+    z-index: 2;
+  }
+  .fun-feature-bounce {
+    animation: bounceIn 1.4s both;
+  }
+  @keyframes bounceIn {
+    0% { opacity: 0; transform: scale(.3);}
+    50% { opacity: 1; transform: scale(1.05);}
+    70% {transform: scale(.9);}
+    100% {transform: scale(1);}
+  }
+  .fun-feature-glow {
+    box-shadow: 0 0 24px 4px #00ff99, 0 0 60px 16px #0ff2, 0 0 80px 24px #0fc5;
+    animation: glowPulse 2.5s infinite alternate;
+  }
+  @keyframes glowPulse {
+    0% { box-shadow: 0 0 24px 4px #00ff99;}
+    100% { box-shadow: 0 0 60px 16px #0ff299, 0 0 80px 32px #0fc5;}
+  }
+  /* Fun confetti effect for headings */
+  .fun-feature-confetti {
+    position: relative;
+    overflow: visible;
+  }
+  .confetti {
+    position: absolute;
+    pointer-events: none;
+    z-index: 9999;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: confettiFall 1.4s linear forwards;
+  }
+  @keyframes confettiFall {
+    0% { transform: translateY(-80px) scale(1) rotate(0);}
+    80% { opacity: 1;}
+    100% { transform: translateY(60px) scale(0.5) rotate(360deg); opacity: 0;}
+  }
+  /* Add extra fun for feature icons */
+  .service-media img {
+    transition: transform 0.4s cubic-bezier(.36,2,.52,.7), box-shadow 0.3s;
+    cursor: pointer;
+  }
+  .service-media img:hover {
+    transform: scale(1.15) rotate(-3deg);
+    box-shadow: 0 6px 32px 0 #22ffbb66, 0 0 0 8px #e7ffe7cc;
+    filter: brightness(1.12) contrast(1.3);
+  }
+  /* Fun badge for new features */
+
+
+</style>
+
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -45,16 +155,16 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand page-scroll" href="#page-top">O-GREENS&FORESTRY</a> </div>
+      <a class="navbar-brand page-scroll" href="#page-top">O GREENS & FORESTRY</a> </div>
     
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about" class="page-scroll">About</a></li>
-        <li><a href="#services" class="page-scroll">Services</a></li>
-        <li><a href="#portfolio" class="page-scroll">Gallery</a></li>
-        <li><a href="#testimonials" class="page-scroll">Testimonials</a></li>
-        <li><a href="#contact" class="page-scroll">Contact</a></li>
+        <li><a href="#about" class="page-scroll"><i class="fa fa-info-circle"></i>About</a></li>
+        <li><a href="#services" class="page-scroll"><i class="fa fa-cogs"></i>Services</a></li>
+        <li><a href="#portfolio" class="page-scroll"><i class="fa fa-picture-o"></i>Gallery</a></li>
+        <li><a href="#testimonials" class="page-scroll"><i class="fa fa-users"></i>Testimonials</a></li>
+        <li><a href="#contact" class="page-scroll"><i class="fa fa-envelope"></i>Contact</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse --> 
@@ -68,8 +178,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2 intro-text">
-            <h1>LAWN CARE Service</h1>
-            <p> THIS WEB IS STILL ON BETA.THAT MEANS THERE ARE STILL ONGOING DEVELOPMENTS ON IT.</p>
+            <h1>LAWN CARE and tree felling Service</h1>
+            <p> "we are perfect choice for taking care of  properties "your investment".</p>
             <a href="#about" class="btn btn-custom btn-lg page-scroll">More Info</a> </div>
         </div>
       </div>
@@ -78,13 +188,14 @@
 </header>
 <!-- About Section -->
 <div id="about">
+   <div class="overlay">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-6">
         <div class="about-text">
-          <h2>Welcome to <span>O-GREENS&FORESTRY</span></h2>
+          <h2>Welcome to <span>O GREENS & FORESTRY</span></h2>
           <hr>
-          <p>We’re thrilled to have you here! At O-GREENS&FORESTRY, we specialize in both expert lawn care and professional forestry services. Whether you need a beautiful, healthy lawn, tree trimming, land clearing, or forest management, we’re here to meet all your outdoor needs.
+          <p>We’re thrilled to have you here! At O-GREENS & FORESTRY, we specialize in both expert lawn care and professional forestry services. Whether you need a beautiful, healthy lawn, tree trimming, land clearing, or forest management, we’re here to meet all your outdoor needs.
 
             Our mission is simple: to enhance the beauty and health of your property, from the ground up. We provide personalized services for both residential and commercial properties, ensuring your outdoor space is not only well-maintained but also sustainable for the future.
             
@@ -99,7 +210,7 @@
       <div class="col-xs-12 col-md-3">
         <div class="about-media"> <img src="img/about-2.jpg" alt=" "> </div>
         <div class="about-desc">
-          <h3>lawn Care</h3>
+          <h3><i class="fa fa-leaf"></i> lawn Care</h3>
           <p>We offer professional lawn care services to keep your outdoor space looking lush and healthy. From mowing 
             and fertilizing to weed control and landscaping, we ensure your lawn stays green, vibrant, and well-maintained throughout the seasons..</p>
         </div>
@@ -107,7 +218,7 @@
       <div class="col-xs-12 col-md-3">
         <div class="about-media"> <img src="img/ABOUT.jpg" alt=" "> </div>
         <div class="about-desc">
-          <h3>tree felling </h3>
+          <h3><i class="fa fa-tree"></i> tree felling </h3>
           <p>Our expert tree felling services ensure safe and efficient removal of trees that may pose risks to your 
             property. Whether you need to clear space, remove dead or diseased trees,
              or manage overgrown areas, we handle the process with precision and care.</p>
@@ -116,13 +227,14 @@
     </div>
   </div>
 </div>
+</div>
 <!-- Services Section -->
 <div id="services">
   <div class="container">
     <div class="col-md-10 col-md-offset-1 section-title text-center">
-      <h2>Our Services</h2>
+      <h2><i class="fa fa-cogs"></i> Our Services</h2>
       <hr>
-      <p>At O-GREENS&FORESTRY, we provide a wide range of professional lawn and forestry services 
+      <p>At O-GREENS & FORESTRY, we provide a wide range of professional lawn and forestry services 
         to enhance the beauty and health of your outdoor spaces. Whether you need regular lawn care, expert tree management
         , or seasonal cleanups, we are here to help with sustainable and effective solutions.</p>
     </div>
@@ -130,7 +242,7 @@
       <div class="col-md-3 text-center">
         <div class="service-media"> <img src="img/services/service-1.jpg" alt=" "> </div>
         <div class="service-desc">
-          <h3>Lawn Care</h3>
+          <h3><i class="fa fa-leaf"></i> Lawn Care</h3>
           <p>Keep your lawn lush, green, and well-maintained with our expert mowing, fertilization, and weed control services.
              We ensure your grass stays healthy and vibrant all year round.</p>
         </div>
@@ -138,7 +250,7 @@
       <div class="col-md-3 text-center">
         <div class="service-media"> <img src="img/services/service-2.jpg" alt=" "> </div>
         <div class="service-desc">
-          <h3>Landscape Design</h3>
+          <h3><i class="fa fa-paint-brush"></i> Landscape Design</h3>
           <p>Transform your outdoor space into a stunning and functional landscape. Our team specializes in garden design,
              plant selection, and hardscaping to create the perfect outdoor environment.</p>
         </div>
@@ -146,7 +258,7 @@
       <div class="col-md-3 text-center">
         <div class="service-media"> <img src="img/services/service-3.jpg" alt=" "> </div>
         <div class="service-desc">
-          <h3>Tree Care</h3>
+          <h3><i class="fa fa-tree"></i> Tree Care</h3>
           <p>From pruning to tree removal, we offer professional tree care services to keep your trees healthy and your property safe.
              Our team ensures proper maintenance and management for all types of trees.</p>
         </div>
@@ -154,7 +266,7 @@
       <div class="col-md-3 text-center">
         <div class="service-media"> <img src="img/services/service-4.jpg" alt=" "> </div>
         <div class="service-desc">
-          <h3>Spring & Fall Cleanup</h3>
+          <h3><i class="fa fa-leaf"></i> Spring & Fall Cleanup</h3>
           <p>Prepare your yard for the changing seasons with our cleanup services.
              We remove leaves, debris, and overgrowth to keep your landscape tidy and ready for the next season.</p>
         </div>
@@ -164,6 +276,7 @@
 </div>
 <!-- Gallery Section -->
 <div id="portfolio">
+  <div class="overlay">
   <div class="container">
     <div class="section-title text-center center">
       <h2>Project Gallery</h2>
@@ -187,11 +300,11 @@
     </div>
     <div class="row">
       <div class="portfolio-items">
-        <div class="col-sm-6 col-md-4 lawn">
+        <div class="col-sm-6 col-md-4 lawn care">
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/01-small.jpg" title="Project Title" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>lawn care</h4>
+                <h4><i class="fa fa-leaf"></i> lawn care</h4>
               </div>
               <img src="img/portfolio/01-large.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
@@ -218,25 +331,25 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/04-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>lawn care</h4>
+                <h4><i class="fa fa-leaf"></i> lawn Care</h4>
               </div>
               <img src="img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 planting">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/05-large.png" title="Project Title" data-lightbox-gallery="gallery1">
+            <div class="hover-bg"> <a href="img/ABOUT.jpg" title="Project Title" data-lightbox-gallery="gallery1">
               <div class="hover-text">
                 <h4>poster</h4>
               </div>
-              <img src="img/portfolio/05-large.png" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/ABOUT.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 garden">
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/06-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>tree felling</h4>
+                <h4><i class="fa fa-tree"></i> tree felling </h4>
               </div>
               <img src="img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
@@ -245,7 +358,7 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/07-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>tree felling </h4>
+                <h4><i class="fa fa-tree"></i> tree felling </h4>
               </div>
               <img src="img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
@@ -254,7 +367,7 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/08-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>lawncare</h4>
+                <h4><i class="fa fa-leaf"></i> lawn Care</h4>
               </div>
               <img src="img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
@@ -263,7 +376,7 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/09-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>lawn Care</h4>
+                <h4><i class="fa fa-leaf"></i> lawn Care</h4>
               </div>
               <img src="img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
@@ -272,7 +385,7 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/02-small.jpg" title="Project Title" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>log chopping</h4>
+                <h4><i class="fa fa-tree"></i> limbing </h4>
               </div>
               <img src="img/portfolio/02-large.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
@@ -281,7 +394,7 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/03-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>lawn care</h4>
+                <h4><i class="fa fa-leaf"></i> lawn Care</h4>
               </div>
               <img src="img/portfolio/09-large.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
@@ -290,7 +403,7 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/04-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>lawn care</h4>
+                <h4><i class="fa fa-leaf"></i> lawn Care</h4>
               </div>
               <img src="img/portfolio/04-large.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
@@ -299,7 +412,7 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/05-large.png" title="Project Title" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>poster</h4>
+                <h4><i class="fa fa-tree"></i> poster </h4>
               </div>
               <img src="img/portfolio/05-large.png" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
@@ -308,7 +421,7 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/06-small.jpg" title="Project Title" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>tree felling</h4>
+                <h4><i class="fa fa-tree"></i> tree felling </h4>
               </div>
               <img src="img/portfolio/06-large.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
@@ -317,7 +430,7 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/07-small.jpg" title="Project Title" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>tree felling </h4>
+                <h4><i class="fa fa-tree"></i> tree felling </h4>
               </div>
               <img src="img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
@@ -326,7 +439,7 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/08-small.jpg" title="Project Title" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>lawncare</h4>
+                <h4><i class="fa fa-leaf"></i> lawn Care</h4>
               </div>
               <img src="img/portfolio/08-large.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
@@ -335,10 +448,10 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/09-small.jpg" title="Project Title" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>lawn Care</h4>
+                <h4><i class="fa fa-leaf"></i> lawn Care</h4>
               </div>
               <img src="img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
+            </div>
         </div>
       </div>
     </div>
@@ -349,32 +462,56 @@
   <div class="overlay">
     <div class="container">
       <div class="section-title">
-        <h2>Testimonials</h2>
+        <h2><i class="fa fa-users"></i> Testimonials</h2>
         <hr>
       </div>
+
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <div id="testimonial" class="owl-carousel owl-theme">
             <div class="item">
              <H3>- BONTLE DUNGWANE.</H3>
-              <p>The transformation of my lawn has been incredible! The team’s 
-                expertise and attention to detail brought my yard back to life.
-                 They turned a patchy, dull lawn into a vibrant, lush green space I’m proud of. Exceptional service and results</p>
+              <p>The transformation of my lawn has been incredible! .
+                 I’m proud of. Exceptional service and results your service Highly recommend!"</p>
             </div>
             <div class="item">
               <H3>- BA GA MOROKE.</H3>
               <p>"This companey completely transformed  my yard . The team was professional, and the results exceeded our expectations!"</p>
             </div>
-            <div class="item">
+             <div class="item">
               <H3>- BOIKANYO MABUSE.</H3>
-              <p>"This project truly showcases a perfect blend of innovation and craftsmanship. The level of thought and care poured into every detail is nothing short of inspiring.
-                 A remarkable achievement that sets a new benchmark for design excellence.</p>
+              <p>"you did the nice job in my yard kelebogile GO menagane.</p>
             </div>
             <div class="item">
-              <H3>- MRS SPATO.</H3>
+              <H3>- MRS SEPATO.</H3>
               <p>"I couldn’t believe the difference after just one visit! My lawn went from overgrown and unruly to perfectly manicured.
                  The team was professional, reliable, and left my yard looking like a masterpiece. Highly recommend!"</p>
             </div>
+               <div class="item">
+              <H3>- MARRY LEPAAKU.</H3>
+              <p>"This companey completely transformed  my yard . The team was professional, and the results exceeded our expectations!"</p>
+            </div>
+             <div class="item">
+              <H3>- MRS KEETSE.</H3>
+              <p>"mo o berekileng go a bonagala tswela pele o dira jwalo.</p>
+            </div>
+            <div class="item">
+              <H3>- MRS LEFIFI.</H3>
+              <p>"motse waka neo tlhakatlhane thata before otla but now ke thabile"</p>
+            </div>
+            <div class="item">
+              <H3>- BA GA MOROKE.</H3>
+              <p>"This companey completely transformed  my yard . The team was professional, and the results exceeded our expectations!"</p>
+            </div>
+             <div class="item">
+              <H3>- LEBOGANG PITSOANE.</H3>
+              <p>"you did the good job in my yard Highly recommend!".</p>
+            </div>
+            <div class="item">
+              <H3>- MRS KONAITE.</H3>
+              <p>"we are so greatfull ka your service,my yard ya bonagala."</p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -385,38 +522,42 @@
 <div id="contact" class="text-center">
   <div class="container">
     <div class="section-title text-center">
-      <h2>Contact Us</h2>
+      <h2><i class="fa fa-envelope"></i> Contact Us</h2>
       <hr>
-      <p> note that sometimes we recieve high volume of call and massages as ogreens team we will work hard to get back to you</p>
+      <p> <i class="fa fa-info-circle"></i> note that sometimes we recieve high volume of call and massages as ogreens team we will work hard to get back to you</p>
     </div>
     <div class="col-md-10 col-md-offset-1 contact-info">
       <div class="col-md-4">
-        <h3>Address</h3>
+        <h3><i class="fa fa-map-marker"></i> Address</h3>
         <hr>
         <div class="contact-item">
-          <p>0417 seabe</p>
-          <p>5016 lehabe</p>
+          <p><i class="fa fa-map-marker"></i> 0417 seabe</p>
+          <p><i class="fa fa-home"></i> 5016 lehabe</p>
+          <p><i class="fa fa-map-marker"></i> nexto madimo ps</p>
         </div>
       </div>
       <div class="col-md-4">
-        <h3>Working Hours</h3>
+        <h3><i class="fa fa-clock-o"></i> Working Hours</h3>
         <hr>
         <div class="contact-item">
-          <p>Monday-Sunday: 07:00 - 18:00</p>
-          <p>holiday: CLOSED</p>
+          <p><i class="fa fa-calendar"></i> Monday-friday: 07:00 - 18:00</p>
+          <p><i class="fa fa-calendar"></i> sarturday-Sunday: 09:00 - 16:00</p>
+          <p><i class="fa fa-ban"></i> holiday: CLOSED</p>
         </div>
       </div>
       <div class="col-md-4">
-        <h3>Contact Info</h3>
+        <h3><i class="fa fa-phone"></i> Contact Info</h3>
         <hr>
         <div class="contact-item">
-          <p>Phone: +27 78 5257640</p>
-          <p>Email: Ofentsekoloane101@gmail.com</p>
+          <p><i class="fa fa-phone"></i>  Phone: +27 78 525 7640</p>
+          <p><i class="fa fa-facebook"></i>acebook:<a href="https://www.facebook.com/profile.php?id=100086958115841" rel="nofollow"> ogreens</a>  </p>
+          <p><i class="fa fa-whatsapp"></i> whatsapp:<a href="http://wa.me/c/27785257640" rel="nofollow"> +27 78 525 7640</a>  </p>
+          <p><i class="fa fa-envelope"></i> Email: Ofentsekoloane101@gmail.com</p>
         </div>
       </div>
     </div>
     <div class="col-md-8 col-md-offset-2">
-      <h3>Leave us a message</h3>
+      <h3><i class="fa fa-comments"></i>  Leave us a message</h3>
       <form name="sentMessage" id="contactForm" novalidate>
         <div class="row">
           <div class="col-md-6">
@@ -437,7 +578,7 @@
           <p class="help-block text-danger"></p>
         </div>
         <div id="success"></div>
-        <button type="submit" class="btn btn-custom btn-lg">Send Message</button>
+        <button type="submit" class="btn btn-custom btn-lg"><i class="fa fa-paper-plane"></i> Send Message</button>
       </form>
     </div>
   </div>
@@ -449,8 +590,8 @@
       <div class="social">
         <ul>
           <li><a href="https://www.facebook.com/profile.php?id=100086958115841"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+          <li><a href="#"><i class="fa fa fa-map-marker"></i></a></li>
+          <li><a href="http://wa.me/c/27785257640"><i class="fa fa-whatsapp"></i></a></li>
         </ul>
       </div>
       <p>&copy; 2025 O O-GREENS&FORESTRY. Designed by <a href="https://www.facebook.com/profile.php?id=100086958115841" rel="nofollow">OF</a></p>
@@ -631,4 +772,3 @@ hr {
 </script>
 </body>
 </html>
-
